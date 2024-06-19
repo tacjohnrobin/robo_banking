@@ -85,7 +85,10 @@ const config = {
       },
       fontFamily: {
         inter: "var(--font-inter)",
-        "ibm-plex-serif": "var(--font-ibm-plex-serif)",
+        'ibm-plex-serif': ['"IBM Plex Serif"', 'serif'],  
+      },
+      fontWeight:{
+        black: '900',
       },
       keyframes: {
         "accordion-down": {
