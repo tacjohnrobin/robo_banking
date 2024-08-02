@@ -20,10 +20,12 @@ const config = {
     },
     extend: {
       colors: {
+        'custom-white': '#FFF7F2',
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
         },
-        bankGradient: "#0179FE",
+
+        bankGradient: "#fe6a01",
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
@@ -70,7 +72,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bank-gradient": "linear-gradient(90deg, #0179FE 0%, #4893FF 100%)",
+        "bank-gradient": "linear-gradient(90deg, #E06016 0%, #EB8314 100%)",
         "gradient-mesh": "url('/icons/gradient-mesh.svg')",
         "bank-green-gradient":
           "linear-gradient(90deg, #01797A 0%, #489399 100%)",
@@ -84,7 +86,7 @@ const config = {
         creditCard: "8px 10px 16px 0px rgba(0, 0, 0, 0.05)",
       },
       fontFamily: {
-        inter: "var(--font-inter)",
+        manrope: ['Manrope', 'sans-serif'],
         'ibm-plex-serif': ['"IBM Plex Serif"', 'serif'],  
       },
       fontWeight:{

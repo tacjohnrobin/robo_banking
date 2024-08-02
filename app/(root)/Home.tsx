@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <section className="home">
       <div className="home-content">
-        <header className="homeheader">
+        <header className="homeheader"> 
           <HeaderBox
             type="greeting"
             title="Welcome "

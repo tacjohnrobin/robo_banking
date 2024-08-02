@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Serif } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const iBMPlexSerif = IBM_Plex_Serif({
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["400", "700"],
+});
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "700"],
-  variable: "--font-ibm-plex-serif",
+  variable: "--font-inter",
 });
+
 export const metadata: Metadata = {
-  title: "Qubo",
-  description: "Qubo is a mordern banking platform for everyone",
+  title: "Clickpay",
+  description: "Clickpay is a modern banking platform for everyone",
   keywords:
-    "Qubo, Banking, Finance, Money, Investment, Savings, Loans, Credit, Cards, Cryptocurrency, Blockchain, NFTs, DeFi, Web3, Metaverse",
+    "Clickpay, Banking, Finance, Money, Investment, Savings, Loans, Credit, Cards,",
   icons: {
     icon: "/icons/logo.svg",
   },
@@ -25,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${iBMPlexSerif.variable}}`}>
+      <body className={`${manrope.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>

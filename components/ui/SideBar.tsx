@@ -15,12 +15,12 @@ const SideBar = ({ user }: SiderbarProps) => {
         <a href="/" className="flex items-center gap-2">
           <Image
             src="/icons/logo.svg"
-            width={34}
-            height={34}
+            width={30}
+            height={30}
             alt="Logo"
             className="size-[24px]  max-xl:size-14"
           />
-          <h1 className="sidebar-logo">Robobank</h1>
+          <h1 className="sidebar-logo">Clickpay</h1>
         </a>
         <br />
         {sidebarLinks.map((item) => {
