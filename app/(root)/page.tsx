@@ -5,9 +5,9 @@ import React from "react";
 
 const Home = () => {
   const loggedIn = {
-    firstName: "Robo",
-    lastName: "Okush",
-    email: "tacjohnrobin@gmail.com",
+    firstName: "John",
+    lastName: "Doe",
+    email: "Johndoe@mail.com",
   };
   return (
     <section className="home">

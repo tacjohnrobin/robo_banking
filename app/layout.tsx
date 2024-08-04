@@ -15,7 +15,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Clickpay",
-  description: "Clickpay is a modern banking platform for everyone",
+  description: "Send, save and spend smarter with Clickpay! ",
   keywords:
     "Clickpay, Banking, Finance, Money, Investment, Savings, Loans, Credit, Cards,",
   icons: {

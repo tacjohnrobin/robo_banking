@@ -12,7 +12,6 @@ import {
 import { LoginSchema } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { z } from "zod";
 import { useFormStatus } from "react-dom";
@@ -20,9 +19,13 @@ import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
 import CardWrapper from "./Cardwrapper";
+import { InputOTPForm } from "./InputOTPForm";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
+  const [OTP, setOTP] = useState("");
+  const [showOTP, setshowOTP] = useState(false);
 
   const form = useForm({
     resolver: zodResolver(LoginSchema),
@@ -32,9 +35,16 @@ const LoginForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof LoginSchema>) => {
+  const router = useRouter();
+
+  const onSubmit = async (data: z.infer<typeof LoginSchema>) => {
     setLoading(true);
     console.log(data);
+    // Handle form submission logic here
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    setLoading(false); // Reset loading state after handling submission
+    router.push("/components/auth/InputOTPForm"); // Redirect to the top page
   };
 
   const { pending } = useFormStatus();

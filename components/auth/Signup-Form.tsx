@@ -19,7 +19,6 @@ import { z } from "zod";
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
-import router from "next/router";
 import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
