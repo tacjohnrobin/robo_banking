@@ -1,6 +1,5 @@
 "use client";
 
-import CardWrapper from "./cardwrapper";
 import {
   Form,
   FormControl,
@@ -20,6 +19,7 @@ import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Cardwrapper from "./cardwrapper";
 
 const SignUpForm = () => {
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <CardWrapper
+    <Cardwrapper
       label="Send, spend, and save smarter with us"
       title="Sign up for an account"
       backButtonHref="/sign-in"
@@ -126,7 +126,7 @@ const SignUpForm = () => {
           </Button>
         </form>
       </Form>
-    </CardWrapper>
+    </Cardwrapper>
   );
 };
 

@@ -21,6 +21,7 @@ import { Loader2 } from "lucide-react";
 import CardWrapper from "./cardwrapper";
 import { InputOTPForm } from "./InputOTPForm";
 import { useRouter } from "next/navigation";
+import Cardwrapper from "./cardwrapper";
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
@@ -49,7 +50,7 @@ const LoginForm = () => {
 
   const { pending } = useFormStatus();
   return (
-    <CardWrapper
+    <Cardwrapper
       label="send,spend and save smarter"
       title="Sign in to Clickpay"
       backButtonHref="/sign-up"
@@ -84,7 +85,7 @@ const LoginForm = () => {
           </Button>
         </form>
       </Form>
-    </CardWrapper>
+    </Cardwrapper>
   );
 };
 

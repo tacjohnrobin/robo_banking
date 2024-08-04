@@ -17,7 +17,7 @@ interface CardWrapperProps {
   children: React.ReactNode;
 }
 
-const CardWrapper = ({
+const cardwrapper = ({
   label,
   title,
   backButtonHref,
@@ -37,4 +37,4 @@ const CardWrapper = ({
   );
 };
 
-export default CardWrapper;
+export default cardwrapper;
