@@ -18,7 +18,7 @@ import { useFormStatus } from "react-dom";
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
-import CardWrapper from "./Cardwrapper";
+import CardWrapper from "./cardwrapper";
 import { InputOTPForm } from "./InputOTPForm";
 import { useRouter } from "next/navigation";
 
@@ -44,7 +44,7 @@ const LoginForm = () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setLoading(false); // Reset loading state after handling submission
-    router.push("/components/auth/InputOTPForm"); // Redirect to the top page
+    router.push("/"); // Redirect to the top page
   };
 
   const { pending } = useFormStatus();

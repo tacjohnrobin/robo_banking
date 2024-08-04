@@ -1,6 +1,6 @@
 "use client";
 
-import CardWrapper from "./Cardwrapper";
+import CardWrapper from "./cardwrapper";
 import {
   Form,
   FormControl,
