@@ -1,4 +1,5 @@
 import HeaderBox from "@/components/ui/HeaderBox";
+import MoneyFlow from "@/components/ui/MoneyFlow";
 import RightSideBar from "@/components/ui/RightSideBar";
 import TotalBalanceBox from "@/components/ui/TotalBalanceBox";
 import React from "react";
@@ -11,7 +12,7 @@ const Home = () => {
   };
   return (
     <section className="home">
-      <div className="home-content">
+      <div className="font-manrope home-content">
         <header className="homeheader">
           <HeaderBox
             type="greeting"
@@ -26,6 +27,7 @@ const Home = () => {
             totalCurrentBalance={13586.69}
           />
         </header>
+        <MoneyFlow />
       </div>
       <RightSideBar
         user={loggedIn}

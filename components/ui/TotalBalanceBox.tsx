@@ -11,7 +11,7 @@ const totalBalanceBox = ({
 }: TotlaBalanceBoxProps) => {
   return (
     <section className="total-balance">
-      <div className="total-balance-chart">
+      <div className="font-manrope-500 total-balance-chart">
         <DoughnutChart accounts={accounts} />
       </div>
 
