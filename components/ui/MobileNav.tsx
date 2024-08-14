@@ -32,11 +32,13 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className="cursor-pointer"
           />
         </SheetTrigger>
-        <SheetContent side="left" className="border-none  bg-white">
+        <SheetContent side="left" className="border-none  bg-[#FAFAFA]">
           <nav className="flex flex-col gap-4">
             <a href="/" className="flex items-center gap- px-4">
               <Image src="/icons/logo.svg" width={30} height={30} alt="Logo" />
-              <h1 className="text-30 font-bold text-black-1">Robobank</h1>
+              <h1 className="text-30 font-manrope font-bold text-black-1 pl-2 ">
+                Clickpay
+              </h1>
             </a>
             <div className="mobilenav-sheet">
               <SheetClose asChild>

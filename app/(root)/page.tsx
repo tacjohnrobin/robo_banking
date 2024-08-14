@@ -1,6 +1,9 @@
+import QuickTransfer from "@/components/sidebar/QuickTransfer";
+import RightSideBar from "@/components/sidebar/RightSideBar";
 import HeaderBox from "@/components/ui/HeaderBox";
+import InfoBox from "@/components/ui/InfoBox";
 import MoneyFlow from "@/components/ui/MoneyFlow";
-import RightSideBar from "@/components/ui/RightSideBar";
+
 import TotalBalanceBox from "@/components/ui/TotalBalanceBox";
 import React from "react";
 
@@ -13,22 +16,27 @@ const Home = () => {
   return (
     <section className="home">
       <div className="font-manrope home-content">
-        <header className="homeheader">
+        <header className="homeheader pt-3">
           <HeaderBox
             type="greeting"
-            title="Welcome "
+            title="Welcome"
             user={loggedIn?.firstName || "Guest"}
-            subtext="Access and manage your account efficiently"
-          />
-
-          <TotalBalanceBox
-            accounts={[]}
-            totalBanks={1}
-            totalCurrentBalance={13586.69}
+            subtext="Gain Insights and Track Your Transactions Over Time"
           />
         </header>
+        <div className="">
+          <InfoBox />
+        </div>
+        <div className="">
+          <TotalBalanceBox
+            accounts={[]}
+            totalBanks={3}
+            totalCurrentBalance={13586.69}
+          />
+        </div>
         <MoneyFlow />
       </div>
+
       <RightSideBar
         user={loggedIn}
         transactions={[]}

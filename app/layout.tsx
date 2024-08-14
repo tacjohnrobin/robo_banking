@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import ClientAppWrapper from "@/components/splash/CLientAppWrapper";
 
+// Load fonts from Google Fonts
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
@@ -13,16 +15,18 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+// Metadata for the page
 export const metadata: Metadata = {
   title: "Clickpay",
-  description: "Send, save and spend smarter with Clickpay! ",
+  description: "Send, save and spend smarter with Clickpay!",
   keywords:
-    "Clickpay, Banking, Finance, Money, Investment, Savings, Loans, Credit, Cards,",
+    "Clickpay, Banking, Finance, Money, Investment, Savings, Loans, Credit, Cards",
   icons: {
     icon: "/icons/logo.svg",
   },
 };
 
+// RootLayout component defining the structure of the entire app
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${inter.variable}`}>
-        {children}
+        <ClientAppWrapper>{children}</ClientAppWrapper>
       </body>
     </html>
   );

@@ -1,23 +1,21 @@
 import React from "react";
 import {
-  Form,
-  FormControl,
-  FormDescription,
   FormField,
-  FormItem,
   FormLabel,
+  FormControl,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "./ui/input";
-import { Control, FieldPath } from "react-hook-form";
+import { Control, FieldPath, FieldValues } from "react-hook-form";
 import { z } from "zod";
-import { authformSchema } from "@/lib/utils";
+import { authformSchema, RegisterSchema } from "@/lib/utils";
 
-const formSchema = authformSchema("sign-up");
+// Define a generic type for the schema
+type SchemaType = typeof authformSchema | typeof RegisterSchema;
 
-interface CustomInput {
-  control: Control<z.infer<typeof formSchema>>;
-  name: FieldPath<z.infer<typeof formSchema>>;
+interface CustomInputProps<T extends FieldValues> {
+  control: Control<T>;
+  name: FieldPath<T>;
   label: string;
   placeholder: string;
   labelClassName?: string;
@@ -25,7 +23,7 @@ interface CustomInput {
   type?: string;
 }
 
-const CustomInput: React.FC<CustomInput> = ({
+const CustomInput = <T extends FieldValues>({
   control,
   name,
   label,
@@ -33,7 +31,7 @@ const CustomInput: React.FC<CustomInput> = ({
   labelClassName,
   id,
   type,
-}) => {
+}: CustomInputProps<T>) => {
   return (
     <FormField
       control={control}

@@ -18,7 +18,6 @@ import { useFormStatus } from "react-dom";
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
-import CardWrapper from "./cardwrapper";
 import { InputOTPForm } from "./InputOTPForm";
 import { useRouter } from "next/navigation";
 import Cardwrapper from "./cardwrapper";
@@ -51,7 +50,7 @@ const LoginForm = () => {
   const { pending } = useFormStatus();
   return (
     <Cardwrapper
-      label="send,spend and save smarter"
+      label="send, spend and save smarter"
       title="Sign in to Clickpay"
       backButtonHref="/sign-up"
       backButtonLabel="Don't have an account? Register here."

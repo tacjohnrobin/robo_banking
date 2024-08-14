@@ -222,7 +222,7 @@ password: z.string().min(8, {
   message: "Password must be at least 8 characters long"
 }),
 country: z.string().min(3),
-phoneNumber:z.string().min(13).max(13),     
+phoneNumber:z.string().max(13),     
 })
 
 export const LoginSchema = z.object({

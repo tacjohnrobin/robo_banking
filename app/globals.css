@@ -184,7 +184,7 @@
 
   /* Right sidebar */
   .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll !important;
+    @apply no-scrollbar hidden h-screen max-h-screen flex-col mr-5 pl-5 border-l border-gray-200 xl:flex w-[400px] xl:overflow-y-scroll !important;
   }
 
   .profile-banner {
@@ -242,11 +242,11 @@
   }
 
   .header-box-title {
-    @apply text-24 lg:text-30 font-semibold text-gray-900;
+    @apply text-24 lg:text-30 font-manrope font-semibold ;
   }
 
   .header-box-subtext {
-    @apply text-14 lg:text-16 font-normal text-gray-600;
+    @apply text-14 lg:text-16 font-manrope ;
   }
 
   /* Bank Card */

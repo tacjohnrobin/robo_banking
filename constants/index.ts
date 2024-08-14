@@ -5,22 +5,32 @@ export const sidebarLinks = [
     label: "Dashboard",
   },
   {
-    imgURL: "/icons/dollar-circle.svg",
+    imgURL: "/icons/transaction.svg",
     route: "/invoices",
     label: "Invoices",
   },
   {
-    imgURL: "/icons/transaction.svg",
+    imgURL: "/icons/card-add.svg",
     route: "/my-wallets",
     label: "My-wallets",
   },
   {
-    imgURL: "/icons/money-send.svg",
+    imgURL: "/icons/arrowrepeat.svg",
     route: "/activity",
     label: "Activity",
+    subLinks: [
+      {
+        route: "/my-wallets/wallet1",
+        label: "Wallet 1",
+      },
+      {
+        route: "/my-wallets/wallet2",
+        label: "Wallet 2",
+      },
+    ],
   },
   {
-    imgURL: "/icons/money-send.svg",
+    imgURL: "/icons/barchartfill.svg",
     route: "analytics",
     label: "Analytics",
   },

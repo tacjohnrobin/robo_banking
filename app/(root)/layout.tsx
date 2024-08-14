@@ -1,31 +1,34 @@
+import React from "react";
 import MobileNav from "@/components/ui/MobileNav";
-import SideBar from "@/components/ui/SideBar";
+import SideBar from "@/components/sidebar/SideBar";
 import Image from "next/image";
+import NavHeader from "@/components/Nav/NavHeader";
 
 interface RootLayoutProps {
-  children: React.ReactNode; // Define the type of the `children` prop
+  children: React.ReactNode;
 }
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
-  const loggedIn = { firstname: "Robo", lastname: "Okumu" };
+  const loggedIn = { firstname: "John", lastname: "Doe" };
 
   return (
     <main className="flex h-screen w-full font-inter">
       <SideBar user={loggedIn} />
+      <div className="flex flex-col w-full">
+        {/* Include the NavBar */}
 
-      <div className="flex size-full flex-col">
-        <div className="root-layout">
-          <Image
-            src="/icons/logo.svg"
-            width={30}
-            height={30}
-            alt="Menu logo" // Use descriptive alt text for accessibility
-          />
-          <div>
+        <div className="flex-grow">
+          <div className="root-layout p-4">
+            <Image
+              src="/icons/logo.svg"
+              width={30}
+              height={30}
+              alt="Menu logo"
+            />
             <MobileNav user={loggedIn} />
           </div>
+          {children}
         </div>
-        {children}
       </div>
     </main>
   );

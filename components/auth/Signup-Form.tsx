@@ -11,14 +11,16 @@ import {
 } from "@/components/ui/form";
 import { RegisterSchema } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { Input } from "../ui/input";
+import { useForm, Controller } from "react-hook-form";
 import { Button } from "../ui/button";
 import { z } from "zod";
 import { useState } from "react";
 import CustomInput from "../CustomInput";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import Cardwrapper from "./cardwrapper";
 
 const SignUpForm = () => {
@@ -89,22 +91,38 @@ const SignUpForm = () => {
             labelClassName="text-sm"
             id="country"
           />
-          <CustomInput
-            control={form.control}
+
+          <Controller
             name="phoneNumber"
-            label="Phone Number"
-            placeholder="ex: (+254)"
-            labelClassName="text-sm"
-            id="phoneNumber"
+            control={form.control}
+            render={({ field }) => (
+              <div className="font-semibold font-manrope">
+                <label htmlFor="phoneNumber" className="text-sm">
+                  Phone Number
+                </label>
+                <PhoneInput
+                  country={"ke"}
+                  value={field.value}
+                  onChange={field.onChange}
+                  inputProps={{
+                    name: "phoneNumber",
+                    id: "phoneNumber",
+                    placeholder: "ex: (+254)",
+                  }}
+                />
+              </div>
+            )}
           />
+
           <CustomInput
             control={form.control}
             name="email"
             label="Email"
             placeholder="Enter preferred email"
             labelClassName="text-sm"
-            id="email" // Changed to "email"
+            id="email"
           />
+
           <CustomInput
             control={form.control}
             name="password"
